@@ -7,76 +7,94 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
+
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
-      <a class="nav__logo" href="#hero">Ryuji Miyazaki</a>
+      <a class="nav__logo" href="#hero">~/<span>miyazaki-ryuji</span></a>
       <button class="nav__hamburger" id="hamburger" aria-label="メニュー">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav__links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#career">Career</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#skills">skills</a></li>
+        <li><a href="#career">career</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#contact">contact</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero -->
   <section class="hero" id="hero">
-    <div class="hero__content">
-      <p class="hero__label">Software Engineer</p>
-      <h1 class="hero__name">宮﨑 竜治</h1>
-      <p class="hero__tagline">
-        ビジネスと技術の両面を持つ<br />ハイブリッド型エンジニア
-      </p>
-      <p class="hero__desc">
-        営業職からエンジニアへキャリアチェンジ。<br />
-        顧客ニーズを深く理解しながら、Swift・Flutter・Go・Python など<br />
-        多彩な技術スタックで高品質なプロダクトを届けます。
-      </p>
-      <div class="hero__actions">
-        <a class="btn btn--primary" href="#projects">実績を見る</a>
-        <a class="btn btn--outline" href="#contact">お問い合わせ</a>
+    <div class="hero__terminal-col">
+      <div class="terminal">
+        <div class="terminal__bar">
+          <div class="terminal__dots">
+            <span class="dot dot--r"></span>
+            <span class="dot dot--y"></span>
+            <span class="dot dot--g"></span>
+          </div>
+          <span class="terminal__title">profile.json — zsh</span>
+        </div>
+        <div class="terminal__body" id="termBody" aria-label="プロフィール情報"></div>
       </div>
     </div>
-    <div class="hero__scroll">
-      <span></span>
+    <div class="hero__aside">
+      <img class="hero__photo" src="face_icon.png" alt="宮﨑竜治" />
+      <div class="hero__identity">
+        <p class="hero__name-en">Ryuji Miyazaki</p>
+        <p class="hero__name-ja">宮﨑 竜治</p>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-num">3</span>
+          <span class="hero__stat-label">App Store<br />リリース</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">150%</span>
+          <span class="hero__stat-label">営業<br />達成率</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">5+</span>
+          <span class="hero__stat-label">言語<br />スタック</span>
+        </div>
+      </div>
+      <div class="hero__cta">
+        <a class="btn btn--terminal" href="#projects">$ view_projects</a>
+        <a class="btn btn--ghost" href="#contact">$ contact</a>
+      </div>
     </div>
   </section>
 
   <!-- About -->
   <section class="section" id="about">
     <div class="container">
-      <div class="section__header">
-        <p class="section__label">About</p>
+      <header class="section__header fade-in">
+        <p class="section__label">about</p>
         <h2 class="section__title">自己紹介</h2>
-      </div>
-      <div class="about__grid">
-        <div class="about__avatar">
-          <div class="avatar__photo">
-            <img src="face_icon.png" alt="宮﨑竜治" />
+      </header>
+      <div class="about__grid fade-in">
+        <div class="about__sidebar">
+          <div class="avatar__wrap">
+            <img class="avatar__img" src="face_icon.png" alt="宮﨑竜治" />
           </div>
           <div class="about__links">
             <a class="about__link" href="https://github.com/miyazakiryuji" target="_blank" rel="noopener">
               <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
               GitHub
             </a>
-            <a class="about__link" href="https://drive.google.com/drive/u/0/folders/1Q1ZlVCaTwr2-VilA7gbs2C6PwYECEdLJ" target="_blank" rel="noopener">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z"/></svg>
-              Source Code
-            </a>
           </div>
         </div>
         <div class="about__body">
           <h3 class="about__headline">ハイブリッド型エンジニア</h3>
           <p class="about__text">
-            大学卒業後、三菱電機ITソリューションズにてコンサルティング営業に従事。5エリアの代理店を担当し、目標達成率 <strong>140〜150%</strong> を継続達成しました。
+            大学卒業後、三菱電機ITソリューションズにてコンサルティング営業に従事。5エリアの代理店を担当し、目標達成率 <strong>140〜150%</strong> を継続達成。
           </p>
           <p class="about__text">
             2022年9月に富士ソフトへ転職し、組み込み・業務系エンジニアとして自動車向けドライブレコーダー、電子タグ、セルフレジシステムなど多様なプロジェクトを経験。業務外でも Swift / SwiftUI を用いた iOS アプリを <strong>3本 App Store にリリース</strong> し、AI 関連の副業・メンタリング活動にも積極的に取り組んでいます。
@@ -106,51 +124,51 @@
   <!-- Skills -->
   <section class="section section--alt" id="skills">
     <div class="container">
-      <div class="section__header">
-        <p class="section__label">Skills</p>
+      <header class="section__header fade-in">
+        <p class="section__label">skills</p>
         <h2 class="section__title">技術スキル</h2>
-      </div>
-      <div class="skills__grid">
-        <div class="skills__category">
-          <h3 class="skills__cat-title">言語</h3>
+      </header>
+      <div class="skills__grid fade-in">
+        <div class="skills__col">
+          <h3 class="skills__cat">言語</h3>
           <div class="skill-list">
             <div class="skill-item">
-              <div class="skill-item__header">
+              <div class="skill-item__meta">
                 <span class="skill-item__name">Swift / SwiftUI</span>
                 <span class="skill-item__level">2年以上</span>
               </div>
               <div class="skill-item__bar"><div class="skill-item__fill" data-width="85"></div></div>
             </div>
             <div class="skill-item">
-              <div class="skill-item__header">
+              <div class="skill-item__meta">
                 <span class="skill-item__name">Dart / Flutter</span>
                 <span class="skill-item__level">1年以上</span>
               </div>
               <div class="skill-item__bar"><div class="skill-item__fill" data-width="75"></div></div>
             </div>
             <div class="skill-item">
-              <div class="skill-item__header">
+              <div class="skill-item__meta">
                 <span class="skill-item__name">Python</span>
                 <span class="skill-item__level">2年</span>
               </div>
               <div class="skill-item__bar"><div class="skill-item__fill" data-width="70"></div></div>
             </div>
             <div class="skill-item">
-              <div class="skill-item__header">
+              <div class="skill-item__meta">
                 <span class="skill-item__name">Go</span>
                 <span class="skill-item__level">半年</span>
               </div>
               <div class="skill-item__bar"><div class="skill-item__fill" data-width="55"></div></div>
             </div>
             <div class="skill-item">
-              <div class="skill-item__header">
+              <div class="skill-item__meta">
                 <span class="skill-item__name">C++</span>
                 <span class="skill-item__level">半年</span>
               </div>
               <div class="skill-item__bar"><div class="skill-item__fill" data-width="50"></div></div>
             </div>
             <div class="skill-item">
-              <div class="skill-item__header">
+              <div class="skill-item__meta">
                 <span class="skill-item__name">Java</span>
                 <span class="skill-item__level">半年</span>
               </div>
@@ -158,30 +176,29 @@
             </div>
           </div>
         </div>
-
-        <div class="skills__category">
-          <h3 class="skills__cat-title">フレームワーク / ツール</h3>
-          <div class="skill-tags">
-            <span class="tag tag--primary">Firebase</span>
-            <span class="tag tag--primary">ChatGPT API</span>
-            <span class="tag tag--primary">GetX</span>
-            <span class="tag tag--primary">Echo (Go)</span>
-            <span class="tag tag--primary">MariaDB</span>
-            <span class="tag tag--primary">Cloud Firestore</span>
-            <span class="tag tag--secondary">Git</span>
-            <span class="tag tag--secondary">VSCode</span>
-            <span class="tag tag--secondary">Xcode</span>
-            <span class="tag tag--secondary">Cursor</span>
-            <span class="tag tag--secondary">Android Studio</span>
-            <span class="tag tag--secondary">Arduino</span>
+        <div class="skills__col">
+          <h3 class="skills__cat">フレームワーク / ツール</h3>
+          <div class="tag-cloud">
+            <span class="tag tag--fw">Firebase</span>
+            <span class="tag tag--fw">ChatGPT API</span>
+            <span class="tag tag--fw">GetX</span>
+            <span class="tag tag--fw">Echo (Go)</span>
+            <span class="tag tag--fw">MariaDB</span>
+            <span class="tag tag--fw">Cloud Firestore</span>
+            <span class="tag tag--tool">Git</span>
+            <span class="tag tag--tool">VSCode</span>
+            <span class="tag tag--tool">Xcode</span>
+            <span class="tag tag--tool">Cursor</span>
+            <span class="tag tag--tool">Android Studio</span>
+            <span class="tag tag--tool">Arduino</span>
             <span class="tag tag--ai">Dify</span>
             <span class="tag tag--ai">ChatGPT</span>
             <span class="tag tag--ai">Claude</span>
             <span class="tag tag--ai">Copilot</span>
             <span class="tag tag--ai">NotebookLM</span>
           </div>
-          <h3 class="skills__cat-title" style="margin-top: 2rem;">資格</h3>
-          <div class="skill-tags">
+          <h3 class="skills__cat" style="margin-top: 2rem;">資格</h3>
+          <div class="tag-cloud">
             <span class="tag tag--cert">ITパスポート（2021年）</span>
             <span class="tag tag--cert">普通自動車第一種免許（2017年）</span>
           </div>
@@ -193,28 +210,27 @@
   <!-- Career -->
   <section class="section" id="career">
     <div class="container">
-      <div class="section__header">
-        <p class="section__label">Career</p>
+      <header class="section__header fade-in">
+        <p class="section__label">career</p>
         <h2 class="section__title">職務経歴</h2>
-      </div>
-      <div class="timeline">
+      </header>
+
+      <div class="timeline fade-in">
 
         <!-- 富士ソフト -->
         <div class="timeline__company">
           <div class="timeline__company-header">
-            <div class="timeline__dot timeline__dot--main"></div>
+            <span class="timeline__dot timeline__dot--main"></span>
             <div>
               <h3 class="timeline__company-name">富士ソフト株式会社</h3>
-              <p class="timeline__company-period">2022年9月 〜 現在</p>
-              <p class="timeline__company-role">組み込み / 業務系エンジニア</p>
+              <p class="timeline__company-meta"><span class="timeline__period">2022.09 → 現在</span><span class="timeline__role">組み込み / 業務系エンジニア</span></p>
             </div>
           </div>
           <div class="timeline__items">
-
             <div class="timeline__item">
-              <div class="timeline__dot"></div>
+              <span class="timeline__dot"></span>
               <div class="timeline__content">
-                <p class="timeline__period">2025年1月 〜 現在</p>
+                <p class="timeline__date">2025.01 → 現在</p>
                 <h4 class="timeline__title">製造業 セルフレジシステム開発</h4>
                 <p class="timeline__desc">30名体制のプロジェクトにて不具合調査・修正、収納代行機能の新規開発を担当。</p>
                 <div class="timeline__tags">
@@ -224,11 +240,10 @@
                 </div>
               </div>
             </div>
-
             <div class="timeline__item">
-              <div class="timeline__dot"></div>
+              <span class="timeline__dot"></span>
               <div class="timeline__content">
-                <p class="timeline__period">2024年6月 〜 2024年12月</p>
+                <p class="timeline__date">2024.06 → 2024.12</p>
                 <h4 class="timeline__title">製造業向け電子タグの開発（主担当）</h4>
                 <p class="timeline__desc">要件定義・制御仕様書作成から実装・テスト・納品まで一貫して主担当。NFC・E-paper・ZigBee を統合。顧客より高評価を得て追加発注を獲得。</p>
                 <div class="timeline__tags">
@@ -237,12 +252,11 @@
                 </div>
               </div>
             </div>
-
             <div class="timeline__item">
-              <div class="timeline__dot"></div>
+              <span class="timeline__dot"></span>
               <div class="timeline__content">
-                <p class="timeline__period">2024年1月 〜 2024年5月</p>
-                <h4 class="timeline__title">ドライブレコーダー用連携Webサイトのバックエンド開発</h4>
+                <p class="timeline__date">2024.01 → 2024.05</p>
+                <h4 class="timeline__title">ドライブレコーダー用連携 Web サイトのバックエンド開発</h4>
                 <p class="timeline__desc">不具合調査・改修、エラーディスパッチャの新規実装を担当。Go / Echo を未経験から習得して実務レベルへ。</p>
                 <div class="timeline__tags">
                   <span class="tag tag--tech">Go</span>
@@ -251,11 +265,10 @@
                 </div>
               </div>
             </div>
-
             <div class="timeline__item">
-              <div class="timeline__dot"></div>
+              <span class="timeline__dot"></span>
               <div class="timeline__content">
-                <p class="timeline__period">2022年12月 〜 2023年12月</p>
+                <p class="timeline__date">2022.12 → 2023.12</p>
                 <h4 class="timeline__title">自動車業界向けドライブレコーダーのソフトウェアテスト</h4>
                 <p class="timeline__desc">30名体制のプロジェクトにてテスト項目書の作成・実行・進捗管理補助。並行して社内業務自動化ツール（Python スクレイピング + Excel VBA）を開発。</p>
                 <div class="timeline__tags">
@@ -265,31 +278,29 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
 
         <!-- 三菱電機 -->
         <div class="timeline__company">
           <div class="timeline__company-header">
-            <div class="timeline__dot timeline__dot--main"></div>
+            <span class="timeline__dot timeline__dot--main"></span>
             <div>
               <h3 class="timeline__company-name">三菱電機ITソリューションズ株式会社</h3>
-              <p class="timeline__company-period">2021年4月 〜 2022年8月</p>
-              <p class="timeline__company-role">コンサルティング営業</p>
+              <p class="timeline__company-meta"><span class="timeline__period">2021.04 → 2022.08</span><span class="timeline__role">コンサルティング営業</span></p>
             </div>
           </div>
           <div class="timeline__items">
             <div class="timeline__item">
-              <div class="timeline__dot"></div>
+              <span class="timeline__dot"></span>
               <div class="timeline__content">
-                <p class="timeline__period">2021年4月 〜 2022年8月</p>
+                <p class="timeline__date">2021.04 → 2022.08</p>
                 <h4 class="timeline__title">自社製品の代理店向けコンサルティング営業</h4>
                 <p class="timeline__desc">新潟・長野・大阪・広島・福岡の5エリアを担当。業務改善提案・定例ミーティング・イベント企画を通じて担当代理店の売上目標を継続達成。</p>
                 <div class="achievement-badges">
-                  <span class="badge">2021年上半期 達成率 150%</span>
-                  <span class="badge">2021年下半期 達成率 140%</span>
-                  <span class="badge">2022年上半期 目標達成見込み</span>
+                  <span class="badge">2021上半期 150%</span>
+                  <span class="badge">2021下半期 140%</span>
+                  <span class="badge">2022上半期 達成見込み</span>
                 </div>
               </div>
             </div>
@@ -299,19 +310,18 @@
         <!-- 副業 -->
         <div class="timeline__company">
           <div class="timeline__company-header">
-            <div class="timeline__dot timeline__dot--main timeline__dot--side"></div>
+            <span class="timeline__dot timeline__dot--main timeline__dot--purple"></span>
             <div>
               <h3 class="timeline__company-name">副業・個人開発</h3>
-              <p class="timeline__company-period">2023年 〜 現在</p>
+              <p class="timeline__company-meta"><span class="timeline__period">2023 → 現在</span></p>
             </div>
           </div>
           <div class="timeline__items">
-
             <div class="timeline__item">
-              <div class="timeline__dot"></div>
+              <span class="timeline__dot"></span>
               <div class="timeline__content">
-                <p class="timeline__period">2026年4月 〜 現在</p>
-                <h4 class="timeline__title">デジハク（UNIT BASE株式会社）生成AI PROコース専属講師</h4>
+                <p class="timeline__date">2026.04 → 現在</p>
+                <h4 class="timeline__title">デジハク 生成AI PROコース専属講師</h4>
                 <p class="timeline__desc">受講生へのマンツーマンメンタリングを通じた学習支援。目標・習熟度に合わせた学習計画策定。</p>
                 <div class="timeline__tags">
                   <span class="tag tag--ai">ChatGPT</span>
@@ -320,11 +330,10 @@
                 </div>
               </div>
             </div>
-
             <div class="timeline__item">
-              <div class="timeline__dot"></div>
+              <span class="timeline__dot"></span>
               <div class="timeline__content">
-                <p class="timeline__period">2026年3月 〜 現在</p>
+                <p class="timeline__date">2026.03 → 現在</p>
                 <h4 class="timeline__title">株式会社OPT-IN AI導入コンサルティング</h4>
                 <p class="timeline__desc">法人向けのAI導入提案書作成・技術検証支援・週次定例会への参加。</p>
                 <div class="timeline__tags">
@@ -333,13 +342,12 @@
                 </div>
               </div>
             </div>
-
             <div class="timeline__item">
-              <div class="timeline__dot"></div>
+              <span class="timeline__dot"></span>
               <div class="timeline__content">
-                <p class="timeline__period">2025年7月 〜 現在</p>
+                <p class="timeline__date">2025.07 → 現在</p>
                 <h4 class="timeline__title">DMM Difyマスターコース / AI Workshop メンター・講師</h4>
-                <p class="timeline__desc">Dify受講生への技術サポート、コードレビュー、学習計画アドバイス。2026年3月よりAI関連Workshop設計・運営へ移行。</p>
+                <p class="timeline__desc">Dify受講生への技術サポート、コードレビュー、学習計画アドバイス。2026年3月よりAI関連 Workshop 設計・運営へ移行。</p>
                 <div class="timeline__tags">
                   <span class="tag tag--ai">Dify</span>
                   <span class="tag tag--tech">HTML/CSS/JS</span>
@@ -347,7 +355,6 @@
                 </div>
               </div>
             </div>
-
           </div>
         </div>
 
@@ -358,19 +365,22 @@
   <!-- Projects -->
   <section class="section section--alt" id="projects">
     <div class="container">
-      <div class="section__header">
-        <p class="section__label">Projects</p>
+      <header class="section__header fade-in">
+        <p class="section__label">projects</p>
         <h2 class="section__title">実績・プロジェクト</h2>
-      </div>
+      </header>
       <div class="projects__grid">
 
-        <div class="project-card">
-          <div class="project-card__icon project-card__icon--blue">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/><path d="M4.5 6.5A9.96 9.96 0 0112 4c2.2 0 4.23.71 5.87 1.9L6.4 17.37A9.96 9.96 0 014 12c0-2.1.65-4.05 1.74-5.67L4.5 6.5z" stroke="none" fill="currentColor" opacity="0.2"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/></svg>
+        <div class="project-card fade-in">
+          <div class="project-card__bar">
+            <div class="terminal__dots terminal__dots--sm">
+              <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            </div>
+            <span class="project-card__filename">PetTrack.swift</span>
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">PetTrack</h3>
-            <p class="project-card__subtitle">iOS ペット管理アプリ</p>
+            <p class="project-card__sub">iOS ペット管理アプリ</p>
             <p class="project-card__desc">MVVM 設計で Firebase Authentication / Cloud Firestore を活用。ペットの健康記録・スケジュール管理機能を実装し App Store にリリース。</p>
             <div class="project-card__tags">
               <span class="tag tag--tech">Swift</span>
@@ -384,13 +394,16 @@
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-card__icon project-card__icon--purple">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/><path stroke-linecap="round" stroke-linejoin="round" d="M18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z"/></svg>
+        <div class="project-card fade-in">
+          <div class="project-card__bar">
+            <div class="terminal__dots terminal__dots--sm">
+              <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            </div>
+            <span class="project-card__filename">AIGame.swift</span>
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">AIカメと遊ぶ 水平思考ゲーム</h3>
-            <p class="project-card__subtitle">iOS AI ゲームアプリ</p>
+            <p class="project-card__sub">iOS AI ゲームアプリ</p>
             <p class="project-card__desc">ChatGPT API を活用した AI 会話ゲーム。ユーザーが謎に質問し、AI が Yes / No で答えながら真相を導くインタラクティブな体験を提供。</p>
             <div class="project-card__tags">
               <span class="tag tag--tech">Swift</span>
@@ -403,13 +416,16 @@
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-card__icon project-card__icon--teal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 3.75H6A2.25 2.25 0 003.75 6v1.5M16.5 3.75H18A2.25 2.25 0 0120.25 6v1.5m0 9V18A2.25 2.25 0 0118 20.25h-1.5m-9 0H6A2.25 2.25 0 013.75 18v-1.5M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <div class="project-card fade-in">
+          <div class="project-card__bar">
+            <div class="terminal__dots terminal__dots--sm">
+              <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            </div>
+            <span class="project-card__filename">ScanGuard.swift</span>
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">ScanGuard</h3>
-            <p class="project-card__subtitle">iOS スキャン・セキュリティアプリ</p>
+            <p class="project-card__sub">iOS スキャン・セキュリティアプリ</p>
             <p class="project-card__desc">スキャン機能とセキュリティ機能を組み合わせた iOS アプリを設計・開発し App Store にリリース。</p>
             <div class="project-card__tags">
               <span class="tag tag--tech">Swift</span>
@@ -421,13 +437,16 @@
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-card__icon project-card__icon--orange">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z"/></svg>
+        <div class="project-card fade-in">
+          <div class="project-card__bar">
+            <div class="terminal__dots terminal__dots--sm">
+              <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            </div>
+            <span class="project-card__filename">e-tag.cpp</span>
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">製造業向け電子タグ開発</h3>
-            <p class="project-card__subtitle">組み込みシステム（主担当）</p>
+            <p class="project-card__sub">組み込みシステム（主担当）</p>
             <p class="project-card__desc">要件定義から制御仕様書作成・実装・テスト・納品まで一貫して主担当。NFC・E-paper・ZigBee 等の複数モジュールを統合し、顧客から高評価。追加発注を獲得。</p>
             <div class="project-card__tags">
               <span class="tag tag--tech">C++</span>
@@ -439,13 +458,16 @@
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-card__icon project-card__icon--green">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+        <div class="project-card fade-in">
+          <div class="project-card__bar">
+            <div class="terminal__dots terminal__dots--sm">
+              <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            </div>
+            <span class="project-card__filename">backend.go</span>
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">ドライブレコーダー連携 Web サイト</h3>
-            <p class="project-card__subtitle">バックエンド開発</p>
+            <p class="project-card__sub">バックエンド開発</p>
             <p class="project-card__desc">Go / Echo を未経験から短期習得し、不具合調査・改修とエラーディスパッチャの新規実装を担当。5名体制で5ヶ月間バックエンド開発に従事。</p>
             <div class="project-card__tags">
               <span class="tag tag--tech">Go</span>
@@ -458,13 +480,16 @@
           </div>
         </div>
 
-        <div class="project-card">
-          <div class="project-card__icon project-card__icon--indigo">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/></svg>
+        <div class="project-card fade-in">
+          <div class="project-card__bar">
+            <div class="terminal__dots terminal__dots--sm">
+              <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            </div>
+            <span class="project-card__filename">mentoring.md</span>
           </div>
           <div class="project-card__body">
             <h3 class="project-card__title">AI スクール メンタリング・講師活動</h3>
-            <p class="project-card__subtitle">DMM / デジハク</p>
+            <p class="project-card__sub">DMM / デジハク</p>
             <p class="project-card__desc">DMMにてDify・プログラミング学習者へのメンタリング・コードレビュー。2026年4月よりデジハク生成AI PROコース専属講師として受講生のマンツーマン支援。</p>
             <div class="project-card__tags">
               <span class="tag tag--ai">Dify</span>
@@ -484,30 +509,32 @@
   <!-- Contact -->
   <section class="section" id="contact">
     <div class="container">
-      <div class="section__header">
-        <p class="section__label">Contact</p>
+      <header class="section__header fade-in">
+        <p class="section__label">contact</p>
         <h2 class="section__title">お問い合わせ</h2>
-        <p class="section__subtitle">業務委託のご相談はお気軽にどうぞ。</p>
-      </div>
-      <div class="contact__info contact__info--center">
-        <div class="contact__item">
+        <p class="section__sub">業務委託のご相談はお気軽にどうぞ。</p>
+      </header>
+      <div class="contact__list fade-in">
+        <a class="contact__item" href="mailto:miyazaki.ryuji.pgc@gmail.com">
           <div class="contact__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
           </div>
-          <div>
-            <p class="contact__label">メール</p>
-            <a class="contact__value" href="mailto:miyazaki.ryuji.pgc@gmail.com">miyazaki.ryuji.pgc@gmail.com</a>
+          <div class="contact__body">
+            <p class="contact__label">Email</p>
+            <p class="contact__value">miyazaki.ryuji.pgc@gmail.com</p>
           </div>
-        </div>
-        <div class="contact__item">
+          <span class="contact__arrow">→</span>
+        </a>
+        <a class="contact__item" href="https://github.com/miyazakiryuji" target="_blank" rel="noopener">
           <div class="contact__icon">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
           </div>
-          <div>
+          <div class="contact__body">
             <p class="contact__label">GitHub</p>
-            <a class="contact__value" href="https://github.com/miyazakiryuji" target="_blank" rel="noopener">github.com/miyazakiryuji</a>
+            <p class="contact__value">github.com/miyazakiryuji</p>
           </div>
-        </div>
+          <span class="contact__arrow">→</span>
+        </a>
       </div>
     </div>
   </section>
@@ -515,7 +542,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p class="footer__copy">&copy; 2026 宮﨑竜治. All rights reserved.</p>
+      <p class="footer__copy">// &copy; 2026 宮﨑竜治. All rights reserved.</p>
     </div>
   </footer>
 
